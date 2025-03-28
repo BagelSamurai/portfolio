@@ -1,8 +1,18 @@
+/* Fonts */
+
+.press-start-2p {
+  font-family: "Press Start 2P", cursive;
+}
+.roboto-condensed {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+/* Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Gilroy";
+  font-family: "Press Start 2P", cursive;
 }
 
 html,
@@ -16,6 +26,7 @@ body {
   width: 100%;
   background-color: #efeae3;
   position: relative;
+  padding: 0 2vw;
 }
 nav {
   padding: 2vw;
@@ -28,8 +39,73 @@ nav {
   justify-content: space-between;
 }
 nav img {
-  height: 40px;
-  width: 40px;
+  width: 100px;
+  height: 100px;
+  transform: scaleX(-1);
 }
-.nav-links {
+#nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+#nav-links h4 {
+  padding: 10px 20px;
+  border: 1px solid grey;
+  border-radius: 50px;
+  font-weight: 500;
+  color: black;
+  font-size: 17px;
+  position: relative;
+  transition: all ease 0.4s;
+  overflow: hidden;
+}
+
+#nav-links h4::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+
+  left: 0;
+  bottom: -100%;
+  border-radius: 50%;
+  transition: all ease 0.4s;
+}
+#nav-links h4:hover::after {
+  bottom: 0;
+  border-radius: 0;
+}
+
+#nav-links h4 a {
+  text-decoration: none;
+  color: black;
+  z-index: 9;
+  position: relative;
+}
+#nav-links h4:hover a {
+  color: white;
+}
+
+#center {
+  height: 65vh;
+  width: 100%;
+  /* background-color: orange; */
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: 1px solid #0000003c;
+  padding-bottom: 2.5vw;
+}
+
+#left h3 {
+  width: 25vw;
+  font-size: 1.5vw;
+  line-height: 2vw;
+}
+
+#center h1 {
+  font-size: 5vw;
+  text-align: right;
+  line-height: 8vw;
 }
